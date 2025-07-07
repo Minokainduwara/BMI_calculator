@@ -53,39 +53,82 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                     )
                 ]
               ),
-              Column(
+              Row(
                 children: [
-                  Text("Weight"),
-                  Text("74",style: TextStyle(
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                  )
-                  ),
-                  //Text("kg"),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Column(
                     children: [
-                      FloatingActionButton(
-                        elevation: 0,
-                        shape: ShapeBorder.lerp(
-                          CircleBorder(),
-                          CircleBorder(),
-                          0.5,
-                        ),
-                        onPressed: (){},
-                        child: Icon(Icons.remove),
+                      Text("Weight"),
+                      Text("74",style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      )
                       ),
-
-                      FloatingActionButton(
-                        elevation: 0,
-                        shape: ShapeBorder.lerp(
-                          CircleBorder(),
-                          CircleBorder(),
-                          0.5,
-                        ),
-                        onPressed: (){},
-                        child: Icon(Icons.add),
+                      //Text("kg"),
+                  
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FloatingActionButton(
+                            elevation: 0,
+                            shape: ShapeBorder.lerp(
+                              CircleBorder(),
+                              CircleBorder(),
+                              0.5,
+                            ),
+                            onPressed: (){},
+                            child: Icon(Icons.remove),
+                          ),
+                  
+                          FloatingActionButton(
+                            elevation: 0,
+                            shape: ShapeBorder.lerp(
+                              CircleBorder(),
+                              CircleBorder(),
+                              0.5,
+                            ),
+                            onPressed: (){},
+                            child: Icon(Icons.add),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  
+                  Column(
+                    children: [
+                      Text("Weight"),
+                      Text("74",style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                      )
+                      ),
+                      //Text("kg"),
+                  
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FloatingActionButton(
+                            elevation: 0,
+                            shape: ShapeBorder.lerp(
+                              CircleBorder(),
+                              CircleBorder(),
+                              0.5,
+                            ),
+                            onPressed: (){},
+                            child: Icon(Icons.remove),
+                          ),
+                  
+                          FloatingActionButton(
+                            elevation: 0,
+                            shape: ShapeBorder.lerp(
+                              CircleBorder(),
+                              CircleBorder(),
+                              0.5,
+                            ),
+                            onPressed: (){},
+                            child: Icon(Icons.add),
+                          ),
+                        ],
                       ),
                     ],
                   ),
