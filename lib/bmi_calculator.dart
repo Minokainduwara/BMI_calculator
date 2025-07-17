@@ -27,8 +27,19 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(onPressed: () {}, child: Text("Male")),
-                  ElevatedButton(onPressed: () {}, child: Text("FeMale")),
+                  Column(
+                    children: [
+                      Icon(Icons.male),
+                      Text("Male")
+                    ],
+                  ),
+
+                  Column(
+                    children: [
+                      Icon(Icons.female),
+                      Text("Female")
+                    ],
+                  ),
                   ],
               ),
               Column(
@@ -54,6 +65,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                 ]
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
@@ -93,11 +105,11 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                       ),
                     ],
                   ),
-                  
+                  SizedBox(width: 50),
                   Column(
                     children: [
-                      Text("Weight"),
-                      Text("74",style: TextStyle(
+                      Text("Height"),
+                      Text("164",style: TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       )
