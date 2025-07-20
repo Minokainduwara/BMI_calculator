@@ -1,3 +1,4 @@
+import 'package:bmicalc/constants.dart';
 import 'package:flutter/material.dart';
 
 class BMICalculatorPage extends StatefulWidget {
@@ -27,18 +28,49 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    children: [
-                      Icon(Icons.male),
-                      Text("Male")
-                    ],
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    color: kTileColor,
+                    child: const Column(
+                      children: [
+                        Icon(
+                          Icons.male,
+                          size: 50,
+                          color: kActiveCardColor,
+                          ),
+                        Text(
+                          "Male",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: kActiveCardColor
+                            )
+                    
+                          )
+                      ],
+                    ),
                   ),
-
-                  Column(
-                    children: [
-                      Icon(Icons.female),
-                      Text("Female")
-                    ],
+                  const SizedBox(width: 50),
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    color: kTileColor,
+                    child: const Column(
+                      children: [
+                        Icon(
+                          Icons.female,
+                          size: 50,
+                          color: kInactiveCardColor,
+                        ),
+                        Text(
+                          "Female",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: kInactiveCardColor,
+                            )
+                        )
+                      ],
+                    ),
                   ),
                   ],
               ),
