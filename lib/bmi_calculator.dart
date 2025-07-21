@@ -74,107 +74,139 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                   ),
                   ],
               ),
-              Column(
-                children:[
-                  Text("Height"),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("185", style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
+              SizedBox(height: 50),
+              Container(
+                padding: const EdgeInsets.all(20),
+                color: kTileColor,
+                child: Column(
+                  children:[
+                    const Text(
+                      "Height",
+                      style: TextStyle(
+                        color: kActiveCardColor,
+                      ),
+                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("185", style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          color: kActiveCardColor,
+                          ),
+                          ),
+                        Text(
+                          "cm",
+                          style: TextStyle(
+                            color: kActiveCardColor,
+                          )
                         ),
-                        ),
-                      Text("cm"),
-                    ],
-                  ),
-                  Slider(
-                    min: 80,
-                    max: 220,
-                    value: 183,
-                    onChanged: (value) {},
-                    )
-                ]
+                      ],
+                    ),
+                    Slider(
+                      min: 80,
+                      max: 220,
+                      value: 183,
+                      onChanged: (value) {},
+                      )
+                  ]
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    children: [
-                      Text("Weight"),
-                      Text("74",style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                      )
-                      ),
-                      //Text("kg"),
-                  
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FloatingActionButton(
-                            elevation: 0,
-                            shape: ShapeBorder.lerp(
-                              CircleBorder(),
-                              CircleBorder(),
-                              0.5,
-                            ),
-                            onPressed: (){},
-                            child: Icon(Icons.remove),
+                  Container(
+                    color: kTileColor,
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Weight",
+                          style: TextStyle(
+                            color: kActiveCardColor,
                           ),
-                  
-                          FloatingActionButton(
-                            elevation: 0,
-                            shape: ShapeBorder.lerp(
-                              CircleBorder(),
-                              CircleBorder(),
-                              0.5,
+                        ),
+                        Text("74",style: TextStyle(
+                          color: kActiveCardColor,
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                        )
+                        ),
+                        //Text("kg"),
+                    
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: (){},
+                              child: Icon(Icons.remove),
                             ),
-                            onPressed: (){},
-                            child: Icon(Icons.add),
-                          ),
-                        ],
-                      ),
-                    ],
+
+                            SizedBox(width: 20),
+                    
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: (){},
+                              child: Icon(Icons.add),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 50),
-                  Column(
-                    children: [
-                      Text("Height"),
-                      Text("164",style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                      )
-                      ),
-                      //Text("kg"),
-                  
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FloatingActionButton(
-                            elevation: 0,
-                            shape: ShapeBorder.lerp(
-                              CircleBorder(),
-                              CircleBorder(),
-                              0.5,
+                  Container(
+                    color: kTileColor,
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Text("Height"),
+                        Text("164",style: TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                        )
+                        ),
+                        //Text("kg"),
+                    
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: (){},
+                              child: Icon(Icons.remove),
                             ),
-                            onPressed: (){},
-                            child: Icon(Icons.remove),
-                          ),
-                  
-                          FloatingActionButton(
-                            elevation: 0,
-                            shape: ShapeBorder.lerp(
-                              CircleBorder(),
-                              CircleBorder(),
-                              0.5,
+                    
+                            FloatingActionButton(
+                              elevation: 0,
+                              shape: ShapeBorder.lerp(
+                                CircleBorder(),
+                                CircleBorder(),
+                                0.5,
+                              ),
+                              onPressed: (){},
+                              child: Icon(Icons.add),
                             ),
-                            onPressed: (){},
-                            child: Icon(Icons.add),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
