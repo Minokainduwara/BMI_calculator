@@ -13,11 +13,19 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: kBackgroundColor,
         centerTitle: true,
-        title: const Text('BMI Calculator'),
+        title: const Text(
+          'BMI Calculator',
+          style: TextStyle(
+            color: kActiveCardColor,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),)
       ),
       body: Container(
-        color: Colors.blue[50],
+        padding: const EdgeInsets.all(20),
+        color: kBackgroundColor,
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -28,53 +36,57 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    color: kTileColor,
-                    child: const Column(
-                      children: [
-                        Icon(
-                          Icons.male,
-                          size: 50,
-                          color: kActiveCardColor,
-                          ),
-                        Text(
-                          "Male",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: kActiveCardColor
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      color: kTileColor,
+                      child: const Column(
+                        children: [
+                          Icon(
+                            Icons.male,
+                            size: 50,
+                            color: kActiveCardColor,
+                            ),
+                          Text(
+                            "Male",
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: kActiveCardColor
+                              )
+                      
                             )
-                    
-                          )
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                  const SizedBox(width: 50),
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    color: kTileColor,
-                    child: const Column(
-                      children: [
-                        Icon(
-                          Icons.female,
-                          size: 50,
-                          color: kInactiveCardColor,
-                        ),
-                        Text(
-                          "Female",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                  const SizedBox(width: 5),
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      color: kTileColor,
+                      child: const Column(
+                        children: [
+                          Icon(
+                            Icons.female,
+                            size: 50,
                             color: kInactiveCardColor,
-                            )
-                        )
-                      ],
+                          ),
+                          Text(
+                            "Female",
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: kInactiveCardColor,
+                              )
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   ],
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 25),
               Container(
                 padding: const EdgeInsets.all(20),
                 color: kTileColor,
@@ -112,6 +124,8 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                   ]
                 ),
               ),
+
+              const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -165,14 +179,20 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 50),
+                  SizedBox(width: 5),
                   Container(
                     color: kTileColor,
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Text("Height"),
+                        Text(
+                          "Height",
+                          style: TextStyle(
+                            color: kActiveCardColor,
+                          ),
+                        ),
                         Text("164",style: TextStyle(
+                          color: kActiveCardColor,
                           fontSize: 50,
                           fontWeight: FontWeight.bold,
                         )
@@ -192,7 +212,9 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                               onPressed: (){},
                               child: Icon(Icons.remove),
                             ),
-                    
+
+                            SizedBox(width: 20),
+
                             FloatingActionButton(
                               elevation: 0,
                               shape: ShapeBorder.lerp(
@@ -212,6 +234,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
               ),
             ],
           ),
+          const SizedBox(height: 25),
           ElevatedButton(onPressed: () {}, child: Text("Calculate BMI")),
          ],
         ),
