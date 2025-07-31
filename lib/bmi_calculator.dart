@@ -39,7 +39,10 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.all(20),
-                      color: kTileColor,
+                      decoration: BoxDecoration(
+                        color: kTileColor,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                       child: const Column(
                         children: [
                           Icon(
@@ -64,7 +67,11 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.all(20),
-                      color: kTileColor,
+                      decoration: BoxDecoration(
+                        color: kTileColor,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      
                       child: const Column(
                         children: [
                           Icon(
@@ -129,105 +136,109 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    color: kTileColor,
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Weight",
-                          style: TextStyle(
-                            color: kActiveCardColor,
+                  Expanded(
+                    child: Container(
+                      color: kTileColor,
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Weight",
+                            style: TextStyle(
+                              color: kActiveCardColor,
+                            ),
                           ),
-                        ),
-                        Text("74",style: TextStyle(
-                          color: kActiveCardColor,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                        )
-                        ),
-                        //Text("kg"),
-                    
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                          Text("74",style: TextStyle(
+                            color: kActiveCardColor,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                          )
+                          ),
+                          //Text("kg"),
+                      
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: (){},
+                                child: Icon(Icons.remove),
                               ),
-                              onPressed: (){},
-                              child: Icon(Icons.remove),
-                            ),
-
-                            SizedBox(width: 20),
                     
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                              SizedBox(width: 20),
+                      
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: (){},
+                                child: Icon(Icons.add),
                               ),
-                              onPressed: (){},
-                              child: Icon(Icons.add),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(width: 5),
-                  Container(
-                    color: kTileColor,
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Height",
-                          style: TextStyle(
-                            color: kActiveCardColor,
+                  Expanded(
+                    child: Container(
+                      color: kTileColor,
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Height",
+                            style: TextStyle(
+                              color: kActiveCardColor,
+                            ),
                           ),
-                        ),
-                        Text("164",style: TextStyle(
-                          color: kActiveCardColor,
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                        )
-                        ),
-                        //Text("kg"),
+                          Text("164",style: TextStyle(
+                            color: kActiveCardColor,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                          )
+                          ),
+                          //Text("kg"),
+                      
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: (){},
+                                child: Icon(Icons.remove),
+                              ),
                     
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
+                              SizedBox(width: 20),
+                    
+                              FloatingActionButton(
+                                elevation: 0,
+                                shape: ShapeBorder.lerp(
+                                  CircleBorder(),
+                                  CircleBorder(),
+                                  0.5,
+                                ),
+                                onPressed: (){},
+                                child: Icon(Icons.add),
                               ),
-                              onPressed: (){},
-                              child: Icon(Icons.remove),
-                            ),
-
-                            SizedBox(width: 20),
-
-                            FloatingActionButton(
-                              elevation: 0,
-                              shape: ShapeBorder.lerp(
-                                CircleBorder(),
-                                CircleBorder(),
-                                0.5,
-                              ),
-                              onPressed: (){},
-                              child: Icon(Icons.add),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
