@@ -11,6 +11,7 @@ class BMICalculatorPage extends StatefulWidget {
 class _BMICalculatorPageState extends State<BMICalculatorPage> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kBackgroundColor,
@@ -39,10 +40,7 @@ class _BMICalculatorPageState extends State<BMICalculatorPage> {
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: kTileColor,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
+                      decoration: kTileBorderDecoration,
                       child: const Column(
                         children: [
                           Icon(
